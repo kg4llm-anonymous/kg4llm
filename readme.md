@@ -1,4 +1,4 @@
-Please download the dataset and knowledge base from "https://pan.baidu.com/s/1lpvFXCNjQHbEIpmVKeY4kA?pwd=j0ii" with password "j0ii". 
+Please download the dataset and knowledge base from "https://drive.google.com/file/d/1zurxfo59CH4Bhu8NJdWiP9XZs68983k6/view?usp=drive_link". 
 Then, put them in the same directory with the code.
 ### Requires
 * python 3.10.0
