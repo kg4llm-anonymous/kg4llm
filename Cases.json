@@ -1,62 +1,362 @@
 [
-    {"query":"convert a stack trace to a string </s> java.lang.Throwable", "prediction":"java.io.StringWriter.StringWriter(int) java.io.PrintWriter.PrintWriter(java.io.String,java.nio.charset.Charset) java.lang.Throwable.printStackTrace(java.io.PrintWriter)", "comment":"trust concise"},
-    {"query":"convert string to int </s> java.lang.String", "prediction":"java.lang.String.trim() java.lang.Integer.parseInt(java.lang.String,int)", "comment":"trust correct"},
-    {"query":"open file dialog </s> java.awt.Frame java.lang.String int", "prediction":"java.awt.FileDialog.FileDialog(java.awt.Frame,java.lang.String,int)", "comment":"trust correct concise"},
-    {"query":"get files in folder </s> java.io.File", "prediction":"java.io.File.File(java.io.File,java.lang.String) java.io.File.listFiles() java.io.File.getName()", "comment":"trust correct concise"},
-    {"query":"create a file </s> java.lang.String", "prediction":"java.lang.System.getProperty(java.lang.String,java.lang.String) java.io.File.File(java.lang.String,java.lang.String)", "comment":"trust correct"},
-    {"query":"open file from url </s> java.net.URL", "prediction":"java.net.URL.URL(java.net.URL,java.lang.String) java.net.URL.openStream() java.io.InputStreamReader.InputStreamReader(java.io.InputStream,java.nio.charset.Charset) java.io.BufferedReader.BufferedReader(java.io.Reader)", "comment":"trust correct concise"},
-    {"query":"get the audio at the specified url </s> java.net.URL", "prediction":"javax.sound.sampled.AudioSystem.getAudioInputStream(java.net.URL) javax.sound.sampled.AudioSystem.getAudioFileFormat(java.io.InputStream)", "comment":"trust correct"},
-    {"query":"convert the input to a string </s> java.io.InputStream", "prediction":"java.io.InputStream.read(byte[]) java.lang.System.arraycopy(java.lang.Object,int,javinta.lang.Object,int,int) java.lang.String.String(byte[],int,int,java.lang.String)", "comment":"trust correct"},
-    {"query":"read a zip file </s> java.io.InputStream", "prediction":"java.util.zip.GZIPInputStream.GZIPInputStream(java.io.InputStream,int) java.io.InputStream.close()", "comment":"trust correct concise"},
-    {"query":"create a client socket </s> java.net.InetAddress", "prediction":"java.net.Socket.Socket(java.lang.String,int,java.net.InetAddress,int) java.io.InputStreamReader.InputStreamReader(java.io.InputStream,java.nio.charset.Charset) java.io.BufferedReader.BufferedReader(java.io.Reader)", "comment":"trust correct concise"},
-    {"query":"create a server socket </s> java.net.InetAddress", "prediction":"java.net.InetAddress.getLocalHost() java.net.InetAddress.getHostName() java.net.ServerSocket.ServerSocket(int,int,java.net.InetAddress)", "comment":"trust correct"},
-    {"query":"set the new root pane code object for the given window </s> javax.swing.JWindow java.awt.Component", "prediction":"javax.swing.JWindow.remove(java.awt.Component) javax.swing.JWindow.isRootPaneCheckingEnabled() javax.swing.JWindow.setRootPaneCheckingEnabled(boolean) javax.swing.JWindow.add(java.awt.Component,java.lang.Object,int) javax.swing.JWindow.setRootPaneCheckingEnabled(boolean)", "comment":"trust correct"},
-    {"query":"draw circles in a given color </s> java.awt.Graphics2D java.awt.Color", "prediction":"java.awt.Graphics2D.setColor(java.awt.Color) java.awt.Graphics2D.fillOval(int,int,int,int)", "comment":"trust correct concise"},
-    {"query":"create a camel endpoint uri based on the component and service name </s> java.lang.StringBuilder javax.xml.namespace.QName java.lang.CharSequence", "prediction":"java.lang.StringBuilder.StringBuilder(java.lang.CharSequence) java.lang.StringBuilder.append(char[]) javax.xml.namespace.QName.getLocalPart() java.lang.StringBuilder.append(java.lang.String) java.lang.StringBuilder.toString()", "comment":"trust correct concise"},
-    {"query":"starts a new thread </s> java.lang.Runnable", "prediction":"java.lang.Thread.Thread(java.lang.Runnable,java.lang.String) java.lang.Thread.setDaemon(boolean) java.lang.Thread.start()", "comment":"trust correct concise"},
-    {"query":"create a buffered image from the given awt image object </s> java.awt.Image java.awt.image.ImageObserver java.awt.image.BufferedImage java.awt.Graphics java.awt.image.IndexColorModel", "prediction":"java.awt.Image.getHeight(java.awt.image.ImageObserver) java.awt.image.BufferedImage.BufferedImage(int,int,int,java.awt.image.IndexColorModel) java.awt.image.BufferedImage.createGraphics() java.awt.Graphics.drawImage(java.awt.Image,int,int,java.awt.Color,java.awt.image.ImageObserver)", "comment":"trust concise correct"},
-    {"query":"deserialize an object from a file </s> java.net.URL java.io.ObjectInputStream java.io.InputStream", "prediction":"java.net.URL.openStream() java.io.ObjectInputStream.ObjectInputStream(java.io.InputStream) java.io.ObjectInputStream.readObject() java.io.InputStream.close()", "comment":"trust correct concise"},
-    {"query":"combine a locally generated item with a user provided item </s> java.lang.StringBuilder java.lang.CharSequence", "prediction":"java.lang.StringBuilder.StringBuilder(java.lang.CharSequence) java.lang.StringBuilder.append(java.lang.StringBuffer) java.lang.StringBuilder.toString()", "comment":"trust correct concise"},
-    {"query":"connect to the server then enters the processing loop </s> java.net.Socket java.io.BufferedReader java.io.PrintWriter", "prediction":"java.net.Socket.Socket() java.net.Socket.getInputStream() java.io.InputStreamReader.InputStreamReader(java.io.InputStream,java.lang.String) java.io.BufferedReader.BufferedReader(java.io.Reader,int) java.io.PrintWriter.PrintWriter(java.lang.String,java.nio.charset.Charset) java.io.BufferedReader.readLine() java.io.PrintWriter.println(java.lang.String)", "comment":"trust correct concise"},
-    {"query":"execute the given sql statement </s> java.sql.Connection java.sql.PreparedStatement", "prediction":"java.sql.Connection.prepareStatement(java.lang.String,int,int,int) java.sql.PreparedStatement.setString(int,java.lang.String) java.sql.PreparedStatement.executeUpdate(java.lang.String,java.lang.String) java.sql.PreparedStatement.close()", "comment":"trust correct"},
-    {"query":"get the first hour, minute, second of the date specified </s> java.util.Calendar java.util.Date", "prediction":"java.util.Calendar.getInstance(java.util.Locale) java.util.Calendar.setTime(java.util.Date) java.util.Calendar.set(int,int,int,int,int) java.util.Calendar.getTime()", "comment":"trust"},
-    {"query":"check if the specified permission is implied by this object </s> java.security.Permission java.security.BasicPermission", "prediction":"java.security.Permission.getName() java.security.BasicPermission.getName() java.lang.String.equals(java.lang.Object)", "comment":"trust correct concise"},
-    {"query":"give a string representation of a host, return its ip address in textual presentation </s> java.net.InetAddress", "prediction":"java.net.InetAddress.getLocalHost() java.net.InetAddress.getHostName() java.net.InetAddress.getHostAddress()", "comment":"trust correct concise"},
-    {"query":"initializes the button with the given font </s> java.awt.Button java.awt.Font", "prediction":"java.awt.Button.Button() java.awt.Button.setFont(java.awt.Font)", "comment":"trust correct concise"},
-    {"query":"create a GUI containing a menu with the given configuration and shape, and show it  </s> java.awt.Dimension java.awt.PopupMenu java.awt.GraphicsConfiguration", "prediction":"javax.swing.JFrame.JFrame(java.lang.String,java.awt.GraphicsConfiguration) javax.swing.JFrame.setDefaultCloseOperation(int) javax.swing.JFrame.add(java.awt.PopupMenu) javax.swing.JFrame.setSize(java.awt.Dimension) javax.swing.JFrame.setVisible(boolean)", "comment":"trust correct"},
-    {"query":"load previously saved instances from a file </s> javax.swing.JFileChooser java.awt.Component java.io.File", "prediction":"javax.swing.JFileChooser.showOpenDialog(java.awt.Component) javax.swing.JFileChooser.getSelectedFile() java.io.FileInputStream.FileInputStream(java.io.File) java.io.BufferedInputStream.BufferedInputStream(java.io.InputStream) java.io.InputStreamReader.InputStreamReader(java.io.InputStream,java.nio.charset.Charset)", "comment":"trust correct concise"},
-    {"query":"get a JFile chooser with a new file filter </s> javax.swing.JFileChooser javax.swing.filechooser.FileFilter", "prediction":"javax.swing.JFileChooser.JFileChooser(java.lang.String) javax.swing.JFileChooser.addChoosableFileFilter(javax.swing.filechooser.FileFilter) javax.swing.JFileChooser.setFileFilter(javax.swing.filechooser.FileFilter)", "comment":"trust correct concise"},
-    {"query":"get the next message exchange to process, blocking until one becomes available if nothing is already waiting for processing </s> java.util.concurrent.locks.ReentrantLock java.util.concurrent.locks.Condition", "prediction":"java.util.concurrent.locks.ReentrantLock.lock() java.util.concurrent.locks.Condition.await(long,java.util.concurrent.TimeUnit) java.util.concurrent.locks.ReentrantLock.unlock()", "comment":"trust correct concise"},
-    {"query":"load an awt image synchronously in the window by setting up a media tracker for a single image, and blocking until it has loaded </s> java.awt.Component java.awt.MediaTracker java.awt.Image", "prediction":"java.awt.MediaTracker.MediaTracker(java.awt.Component) java.awt.MediaTracker.addImage(java.awt.Image,int,int,int) java.awt.MediaTracker.waitForID(int,long)", "comment":"trust correct concise"},
-    {"query":"trim all whitespace from the given String: leading, trailing, and inbetween characters </s> java.lang.StringBuilder", "prediction":"java.lang.String.length() java.lang.StringBuilder.StringBuilder(java.lang.String) java.lang.String.charAt(int) java.lang.Character.isWhitespace(char) java.lang.StringBuilder.append(java.lang.CharSequence) java.lang.StringBuilder.toString()", "comment":"trust correct concise"},
-    {"query":"concatenate the given number of line delimiters into a single string </s> java.lang.StringBuilder java.lang.CharSequence", "prediction":"java.lang.StringBuilder.StringBuilder(java.lang.CharSequence) java.lang.StringBuilder.append(java.lang.String) java.lang.StringBuilder.toString()", "comment":"trust correct concise"},
-    {"query":"convert the key to a byte array </s> int java.io.ByteArrayOutputStream", "prediction":"java.io.ByteArrayOutputStream.ByteArrayOutputStream(int) java.io.ByteArrayOutputStream.write(byte[],int,int) java.io.ByteArrayOutputStream.toByteArray()", "comment":"trust correct concise"},
-    {"query":"check if the snapshot file is newer than the supplied date </s> java.io.File java.sql.Date", "prediction":"java.io.File.lastModified() java.sql.Date.Date(int,int,int) java.sql.Date.after(java.util.Date)", "comment":"trust correct concise"},
-    {"query":"paint text at the specified location </s> java.awt.FontMetrics java.awt.Graphics", "prediction":"java.awt.FontMetrics.getHeight() java.awt.Graphics.drawString(java.lang.String,int,int)", "comment":"trust concise"},
-    {"query":"set system property </s> java.util.Properties", "prediction":"java.lang.System.getProperties() java.util.Properties.setProperty(java.lang.String,java.lang.String) java.lang.System.setProperties(java.util.Properties)", "comment":"trust correct concise"},
-    {"query":"get the directory path from the specified uri </s> java.net.URI", "prediction":"java.net.URI.getScheme() java.net.URI.getHost() java.net.URI.getPort() java.net.URI.getPath()", "comment":"trust correct"},
-    {"query":"remove the last field separator from the buffer </s> java.lang.StringBuffer", "prediction":"java.lang.StringBuffer.length() java.lang.StringBuffer.charAt(int) java.lang.StringBuffer.delete(int,int)", "comment":"trust correct concise"},
-    {"query":"enable disables the edit menu </s> javax.swing.JMenuItem javax.swing.JButton", "prediction":"javax.swing.JMenuItem.setEnabled(boolean) javax.swing.JButton.setEnabled(boolean)", "comment":"trust correct concise"},
-    {"query":"create a directory under the folder, and returns its full path </s> java.io.File", "prediction":"java.io.File.File(java.io.File,java.lang.String) java.io.File.mkdirs() java.io.File.getAbsolutePath()", "comment":"trust correct"},
-    {"query":"make a string from the contents of this json array </s> java.lang.StringBuffer", "prediction":"java.lang.StringBuffer.StringBuffer(java.lang.String) java.lang.StringBuffer.append(java.lang.StringBuffer) java.lang.StringBuffer.toString()", "comment":"trust correct concise"},
-    {"query":"set the enabled status of the controls </s> javax.swing.JTextField javax.swing.JCheckBox javax.swing.JButton javax.swing.JRadioButton javax.swing.JFileChooser", "prediction":"javax.swing.JTextField.setEnabled(boolean) javax.swing.JCheckBox.setEnabled(boolean) javax.swing.JButton.setEnabled(boolean) javax.swing.JRadioButton.setEnabled(boolean) javax.swing.JFileChooser.setEnabled(boolean)", "comment":"trust correct concise"},
-    {"query":"disconnect the tcp session connection and closes streams </s> java.io.InputStream java.io.OutputStream java.net.Socket", "prediction":" java.io.InputStream.close() java.io.OutputStream.close() java.net.Socket.close()", "comment":"trust correct concise"},
-    {"query":"get add and delete file history for all commits started from the newest commit to the oldest commit </s> java.sql.ResultSet java.awt.List", "prediction":"java.sql.ResultSet.next() java.sql.ResultSet.getString(java.lang.String) java.awt.List.add(java.lang.String,int)", "comment":"trust correct concise"},
-    {"query":"format the given list of products to a string </s> java.util.ArrayList", "prediction":"java.lang.StringBuilder.StringBuilder(java.lang.String) java.util.ArrayList.get() java.lang.StringBuilder.append(java.lang.CharSequence,int,int) java.lang.StringBuilder.toString()", "comment":"trust correct concise"},
-    {"query":"check to see if a path intersects the specified rectangle </s> java.awt.Stroke java.awt.Shape java.awt.Rectangle", "prediction":"java.awt.Stroke.createStrokedShape(java.awt.Shape) java.awt.Rectangle.Rectangle(java.awt.Rectangle) java.awt.Shape.intersects(double,double,double,double)", "comment":"trust correct"},
-    {"query":"draw an ellipse to represent an outlier </s> java.awt.geom.Point2D java.awt.Graphics2D java.awt.Shape", "prediction":"java.lang.Double.Double(java.lang.String) java.awt.geom.Point2D.getX() java.awt.geom.Point2D.getY() java.awt.Graphics2D.draw(java.awt.Shape)", "comment":"trust correct concise"},
-    {"query":"process mouse motion events occurring on this component by dispatching them to any registered mouse motion listener objects </s> java.awt.AWTEvent java.awt.event.MouseMotionListener java.awt.event.MouseEvent", "prediction":"java.awt.AWTEvent.getID() java.awt.event.MouseMotionListener.mouseDragged(java.awt.event.MouseEvent) java.awt.event.MouseMotionListener.mouseMoved(java.awt.event.MouseEvent)", "comment":"trust correct concise"},
-    {"query":"change the current image displayed by the button </s> java.awt.Image javax.swing.JButton", "prediction":"java.awt.Image.getScaledInstance(int,int,int) javax.swing.ImageIcon.ImageIcon(java.awt.Image,java.lang.String) javax.swing.JButton.setIcon(javax.swing.Icon)", "comment":"trust correct concise"},
-    {"query":"interactive with console </s> void", "prediction":"java.lang.System.console() java.io.Console.readLine(java.lang.String)", "comment":"trust correct concise"},
-    {"query":"save the state of the tree map instance to a stream </s> java.io.ObjectOutputStream", "prediction":"java.io.ObjectOutputStream.defaultWriteObject() java.io.ObjectOutputStream.writeInt(int) java.io.ObjectOutputStream.writeObject(java.lang.Object)", "comment":"trust correct"},
-    {"query":"print debugging information about the environment </s> void", "prediction":"java.lang.System.getProperty(java.lang.String,java.lang.String) java.lang.System.getenv(java.lang.String)", "comment":"trust concise"},
-    {"query":"return the global locale </s> void", "prediction":"java.util.Locale.Locale(java.lang.String,java.lang.String,java.lang.String) java.util.Locale.getDefault(java.util.Locale.Category) java.util.Locale.Locale(java.lang.String,java.lang.String,java.lang.String)", "comment":"trust correct"},
-    {"query":"sleep the specified number of milliseconds </s> long", "prediction":"java.lang.Thread.currentThread() java.lang.Thread.sleep(long,int)", "comment":"trust correct concise"},
-    {"query":"parse system params </s> void", "prediction":"java.lang.System.getProperty(java.lang.String) java.lang.Integer.parseInt(java.lang.String,int)", "comment":"trust correct concise"},
-    {"query":"return version of java </s> void", "prediction":"java.lang.System.getProperty(java.lang.String,java.lang.String) java.lang.System.getenv(java.lang.String)", "comment":"trust correct"},
-    {"query":"parse the files </s> java.lang.String", "prediction":"java.io.FileInputStream.FileInputStream(java.lang.String) java.io.InputStreamReader.InputStreamReader(java.io.InputStream,java.nio.charset.Charset) java.io.BufferedReader.BufferedReader(java.io.Reader,int)", "comment":"trust correct concise"},
-    {"query":"check if the object is a nan or infinite number </s> void", "prediction":"java.lang.Double.isNaN(double) java.lang.Double.isInfinite(double)", "comment":"trust correct concise"},
-    {"query":"produce a string from a double </s> double", "prediction":"java.lang.Double.isNaN(double) java.lang.Double.isInfinite(double) java.lang.Double.toString(double)", "comment":"trust correct concise"},
-    {"query":"return a new instance of algorithm parameter generator from the specified provider for the specified algorithm </s> java.lang.String", "prediction":"java.lang.String.isEmpty() java.security.Security.getProvider(java.lang.String) java.security.AlgorithmParameterGenerator.getInstance(java.lang.String,java.security.Provider)", "comment":"trust correct concise"},
-    {"query":"return the zip entry </s> java.lang.String", "prediction":"java.util.zip.ZipFile.ZipFile(java.lang.String,java.nio.charset.Charset) java.util.zip.ZipFile.getEntry(java.lang.String) java.util.zip.ZipFile.close()", "comment":"trust correct concise"}
-    ]
+    {
+        "query": "convert a stack trace to a string </s> java.lang.Throwable",
+        "prediction": "java.io.StringWriter.StringWriter(int) java.io.PrintWriter.PrintWriter(java.io.String,java.nio.charset.Charset) java.lang.Throwable.printStackTrace(java.io.PrintWriter)",
+        "comment": "trust concise",
+        "time": 6.7152440547943115
+    },
+    {
+        "query": "convert string to int </s> java.lang.String",
+        "prediction": "java.lang.String.trim() java.lang.Integer.parseInt(java.lang.String,int)",
+        "comment": "trust correct",
+        "time": 6.546463489532471
+    },
+    {
+        "query": "open file dialog </s> java.awt.Frame java.lang.String int",
+        "prediction": "java.awt.FileDialog.FileDialog(java.awt.Frame,java.lang.String,int)",
+        "comment": "trust correct concise",
+        "time": 12.74628210067749
+    },
+    {
+        "query": "get files in folder </s> java.io.File",
+        "prediction": "java.io.File.File(java.io.File,java.lang.String) java.io.File.listFiles() java.io.File.getName()",
+        "comment": "trust correct concise",
+        "time": 6.930773496627808
+    },
+    {
+        "query": "create a file </s> java.lang.String",
+        "prediction": "java.lang.System.getProperty(java.lang.String,java.lang.String) java.io.File.File(java.lang.String,java.lang.String)",
+        "comment": "trust correct",
+        "time": 10.231453657150269
+    },
+    {
+        "query": "open file from url </s> java.net.URL",
+        "prediction": "java.net.URL.URL(java.net.URL,java.lang.String) java.net.URL.openStream() java.io.InputStreamReader.InputStreamReader(java.io.InputStream,java.nio.charset.Charset) java.io.BufferedReader.BufferedReader(java.io.Reader)",
+        "comment": "trust correct concise",
+        "time": 8.321467638015747
+    },
+    {
+        "query": "get the audio at the specified url </s> java.net.URL",
+        "prediction": "javax.sound.sampled.AudioSystem.getAudioInputStream(java.net.URL) javax.sound.sampled.AudioSystem.getAudioFileFormat(java.io.InputStream)",
+        "comment": "trust correct",
+        "time": 7.101425647735596
+    },
+    {
+        "query": "convert the input to a string </s> java.io.InputStream",
+        "prediction": "java.io.InputStream.read(byte[]) java.lang.System.arraycopy(java.lang.Object,int,javinta.lang.Object,int,int) java.lang.String.String(byte[],int,int,java.lang.String)",
+        "comment": "trust correct",
+        "time": 6.9237141609191895
+    },
+    {
+        "query": "read a zip file </s> java.io.InputStream",
+        "prediction": "java.util.zip.GZIPInputStream.GZIPInputStream(java.io.InputStream,int) java.io.InputStream.close()",
+        "comment": "trust correct concise",
+        "time": 6.871097803115845
+    },
+    {
+        "query": "create a client socket </s> java.net.InetAddress",
+        "prediction": "java.net.Socket.Socket(java.lang.String,int,java.net.InetAddress,int) java.io.InputStreamReader.InputStreamReader(java.io.InputStream,java.nio.charset.Charset) java.io.BufferedReader.BufferedReader(java.io.Reader)",
+        "comment": "trust correct concise",
+        "time": 6.760798931121826
+    },
+    {
+        "query": "create a server socket </s> java.net.InetAddress",
+        "prediction": "java.net.InetAddress.getLocalHost() java.net.InetAddress.getHostName() java.net.ServerSocket.ServerSocket(int,int,java.net.InetAddress)",
+        "comment": "trust correct",
+        "time": 5.87074875831604
+    },
+    {
+        "query": "set the new root pane code object for the given window </s> javax.swing.JWindow java.awt.Component",
+        "prediction": "javax.swing.JWindow.remove(java.awt.Component) javax.swing.JWindow.isRootPaneCheckingEnabled() javax.swing.JWindow.setRootPaneCheckingEnabled(boolean) javax.swing.JWindow.add(java.awt.Component,java.lang.Object,int) javax.swing.JWindow.setRootPaneCheckingEnabled(boolean)",
+        "comment": "trust correct",
+        "time": 13.112837314605713
+    },
+    {
+        "query": "draw circles in a given color </s> java.awt.Graphics2D java.awt.Color",
+        "prediction": "java.awt.Graphics2D.setColor(java.awt.Color) java.awt.Graphics2D.fillOval(int,int,int,int)",
+        "comment": "trust correct concise",
+        "time": 9.750170230865479
+    },
+    {
+        "query": "create a camel endpoint uri based on the component and service name </s> java.lang.StringBuilder javax.xml.namespace.QName java.lang.CharSequence",
+        "prediction": "java.lang.StringBuilder.StringBuilder(java.lang.CharSequence) java.lang.StringBuilder.append(char[]) javax.xml.namespace.QName.getLocalPart() java.lang.StringBuilder.append(java.lang.String) java.lang.StringBuilder.toString()",
+        "comment": "trust correct concise",
+        "time": 10.008776187896729
+    },
+    {
+        "query": "starts a new thread </s> java.lang.Runnable",
+        "prediction": "java.lang.Thread.Thread(java.lang.Runnable,java.lang.String) java.lang.Thread.setDaemon(boolean) java.lang.Thread.start()",
+        "comment": "trust correct concise",
+        "time": 6.186205625534058
+    },
+    {
+        "query": "create a buffered image from the given awt image object </s> java.awt.Image java.awt.image.ImageObserver java.awt.image.BufferedImage java.awt.Graphics java.awt.image.IndexColorModel",
+        "prediction": "java.awt.Image.getHeight(java.awt.image.ImageObserver) java.awt.image.BufferedImage.BufferedImage(int,int,int,java.awt.image.IndexColorModel) java.awt.image.BufferedImage.createGraphics() java.awt.Graphics.drawImage(java.awt.Image,int,int,java.awt.Color,java.awt.image.ImageObserver)",
+        "comment": "trust concise correct",
+        "time": 12.295139074325562
+    },
+    {
+        "query": "deserialize an object from a file </s> java.net.URL java.io.ObjectInputStream java.io.InputStream",
+        "prediction": "java.net.URL.openStream() java.io.ObjectInputStream.ObjectInputStream(java.io.InputStream) java.io.ObjectInputStream.readObject() java.io.InputStream.close()",
+        "comment": "trust correct concise",
+        "time": 7.977237701416016
+    },
+    {
+        "query": "combine a locally generated item with a user provided item </s> java.lang.StringBuilder java.lang.CharSequence",
+        "prediction": "java.lang.StringBuilder.StringBuilder(java.lang.CharSequence) java.lang.StringBuilder.append(java.lang.StringBuffer) java.lang.StringBuilder.toString()",
+        "comment": "trust correct concise",
+        "time": 6.046667575836182
+    },
+    {
+        "query": "connect to the server then enters the processing loop </s> java.net.Socket java.io.BufferedReader java.io.PrintWriter",
+        "prediction": "java.net.Socket.Socket() java.net.Socket.getInputStream() java.io.InputStreamReader.InputStreamReader(java.io.InputStream,java.lang.String) java.io.BufferedReader.BufferedReader(java.io.Reader,int) java.io.PrintWriter.PrintWriter(java.lang.String,java.nio.charset.Charset) java.io.BufferedReader.readLine() java.io.PrintWriter.println(java.lang.String)",
+        "comment": "trust correct concise",
+        "time": 12.45979356765747
+    },
+    {
+        "query": "execute the given sql statement </s> java.sql.Connection java.sql.PreparedStatement",
+        "prediction": "java.sql.Connection.prepareStatement(java.lang.String,int,int,int) java.sql.PreparedStatement.setString(int,java.lang.String) java.sql.PreparedStatement.executeUpdate(java.lang.String,java.lang.String) java.sql.PreparedStatement.close()",
+        "comment": "trust correct",
+        "time": 7.504560708999634
+    },
+    {
+        "query": "get the first hour, minute, second of the date specified </s> java.util.Calendar java.util.Date",
+        "prediction": "java.util.Calendar.getInstance(java.util.Locale) java.util.Calendar.setTime(java.util.Date) java.util.Calendar.set(int,int,int,int,int) java.util.Calendar.getTime()",
+        "comment": "trust",
+        "time": 7.831685781478882
+    },
+    {
+        "query": "check if the specified permission is implied by this object </s> java.security.Permission java.security.BasicPermission",
+        "prediction": "java.security.Permission.getName() java.security.BasicPermission.getName() java.lang.String.equals(java.lang.Object)",
+        "comment": "trust correct concise",
+        "time": 5.681608200073242
+    },
+    {
+        "query": "give a string representation of a host, return its ip address in textual presentation </s> java.net.InetAddress",
+        "prediction": "java.net.InetAddress.getLocalHost() java.net.InetAddress.getHostName() java.net.InetAddress.getHostAddress()",
+        "comment": "trust correct concise",
+        "time": 14.626599788665771
+    },
+    {
+        "query": "initializes the button with the given font </s> java.awt.Button java.awt.Font",
+        "prediction": "java.awt.Button.Button() java.awt.Button.setFont(java.awt.Font)",
+        "comment": "trust correct concise",
+        "time": 6.527443170547485
+    },
+    {
+        "query": "create a GUI containing a menu with the given configuration and shape, and show it  </s> java.awt.Dimension java.awt.PopupMenu java.awt.GraphicsConfiguration",
+        "prediction": "javax.swing.JFrame.JFrame(java.lang.String,java.awt.GraphicsConfiguration) javax.swing.JFrame.setDefaultCloseOperation(int) javax.swing.JFrame.add(java.awt.PopupMenu) javax.swing.JFrame.setSize(java.awt.Dimension) javax.swing.JFrame.setVisible(boolean)",
+        "comment": "trust correct",
+        "time": 16.554203748703003
+    },
+    {
+        "query": "load previously saved instances from a file </s> javax.swing.JFileChooser java.awt.Component java.io.File",
+        "prediction": "javax.swing.JFileChooser.showOpenDialog(java.awt.Component) javax.swing.JFileChooser.getSelectedFile() java.io.FileInputStream.FileInputStream(java.io.File) java.io.BufferedInputStream.BufferedInputStream(java.io.InputStream) java.io.InputStreamReader.InputStreamReader(java.io.InputStream,java.nio.charset.Charset)",
+        "comment": "trust correct concise",
+        "time": 8.321747303009033
+    },
+    {
+        "query": "get a JFile chooser with a new file filter </s> javax.swing.JFileChooser javax.swing.filechooser.FileFilter",
+        "prediction": "javax.swing.JFileChooser.JFileChooser(java.lang.String) javax.swing.JFileChooser.addChoosableFileFilter(javax.swing.filechooser.FileFilter) javax.swing.JFileChooser.setFileFilter(javax.swing.filechooser.FileFilter)",
+        "comment": "trust correct concise",
+        "time": 9.412817478179932
+    },
+    {
+        "query": "get the next message exchange to process, blocking until one becomes available if nothing is already waiting for processing </s> java.util.concurrent.locks.ReentrantLock java.util.concurrent.locks.Condition",
+        "prediction": "java.util.concurrent.locks.ReentrantLock.lock() java.util.concurrent.locks.Condition.await(long,java.util.concurrent.TimeUnit) java.util.concurrent.locks.ReentrantLock.unlock()",
+        "comment": "trust correct concise",
+        "time": 8.457281112670898
+    },
+    {
+        "query": "load an awt image synchronously in the window by setting up a media tracker for a single image, and blocking until it has loaded </s> java.awt.Component java.awt.MediaTracker java.awt.Image",
+        "prediction": "java.awt.MediaTracker.MediaTracker(java.awt.Component) java.awt.MediaTracker.addImage(java.awt.Image,int,int,int) java.awt.MediaTracker.waitForID(int,long)",
+        "comment": "trust correct concise",
+        "time": 7.494062662124634
+    },
+    {
+        "query": "trim all whitespace from the given String: leading, trailing, and inbetween characters </s> java.lang.StringBuilder",
+        "prediction": "java.lang.String.length() java.lang.StringBuilder.StringBuilder(java.lang.String) java.lang.String.charAt(int) java.lang.Character.isWhitespace(char) java.lang.StringBuilder.append(java.lang.CharSequence) java.lang.StringBuilder.toString()",
+        "comment": "trust correct concise",
+        "time": 10.216575622558594
+    },
+    {
+        "query": "concatenate the given number of line delimiters into a single string </s> java.lang.StringBuilder java.lang.CharSequence",
+        "prediction": "java.lang.StringBuilder.StringBuilder(java.lang.CharSequence) java.lang.StringBuilder.append(java.lang.String) java.lang.StringBuilder.toString()",
+        "comment": "trust correct concise",
+        "time": 5.639040231704712
+    },
+    {
+        "query": "convert the key to a byte array </s> int java.io.ByteArrayOutputStream",
+        "prediction": "java.io.ByteArrayOutputStream.ByteArrayOutputStream(int) java.io.ByteArrayOutputStream.write(byte[],int,int) java.io.ByteArrayOutputStream.toByteArray()",
+        "comment": "trust correct concise",
+        "time": 5.316172361373901
+    },
+    {
+        "query": "check if the snapshot file is newer than the supplied date </s> java.io.File java.sql.Date",
+        "prediction": "java.io.File.lastModified() java.sql.Date.Date(int,int,int) java.sql.Date.after(java.util.Date)",
+        "comment": "trust correct concise",
+        "time": 5.013428688049316
+    },
+    {
+        "query": "paint text at the specified location </s> java.awt.FontMetrics java.awt.Graphics",
+        "prediction": "java.awt.FontMetrics.getHeight() java.awt.Graphics.drawString(java.lang.String,int,int)",
+        "comment": "trust concise",
+        "time": 6.350959539413452
+    },
+    {
+        "query": "set system property </s> java.util.Properties",
+        "prediction": "java.lang.System.getProperties() java.util.Properties.setProperty(java.lang.String,java.lang.String) java.lang.System.setProperties(java.util.Properties)",
+        "comment": "trust correct concise",
+        "time": 5.650302171707153
+    },
+    {
+        "query": "get the directory path from the specified uri </s> java.net.URI",
+        "prediction": "java.net.URI.getScheme() java.net.URI.getHost() java.net.URI.getPort() java.net.URI.getPath()",
+        "comment": "trust correct",
+        "time": 14.61478328704834
+    },
+    {
+        "query": "remove the last field separator from the buffer </s> java.lang.StringBuffer",
+        "prediction": "java.lang.StringBuffer.length() java.lang.StringBuffer.charAt(int) java.lang.StringBuffer.delete(int,int)",
+        "comment": "trust correct concise",
+        "time": 5.1189727783203125
+    },
+    {
+        "query": "enable disables the edit menu </s> javax.swing.JMenuItem javax.swing.JButton",
+        "prediction": "javax.swing.JMenuItem.setEnabled(boolean) javax.swing.JButton.setEnabled(boolean)",
+        "comment": "trust correct concise",
+        "time": 18.19264006614685
+    },
+    {
+        "query": "create a directory under the folder, and returns its full path </s> java.io.File",
+        "prediction": "java.io.File.File(java.io.File,java.lang.String) java.io.File.mkdirs() java.io.File.getAbsolutePath()",
+        "comment": "trust correct",
+        "time": 6.117549657821655
+    },
+    {
+        "query": "make a string from the contents of this json array </s> java.lang.StringBuffer",
+        "prediction": "java.lang.StringBuffer.StringBuffer(java.lang.String) java.lang.StringBuffer.append(java.lang.StringBuffer) java.lang.StringBuffer.toString()",
+        "comment": "trust correct concise",
+        "time": 9.433349370956421
+    },
+    {
+        "query": "set the enabled status of the controls </s> javax.swing.JTextField javax.swing.JCheckBox javax.swing.JButton javax.swing.JRadioButton javax.swing.JFileChooser",
+        "prediction": "javax.swing.JTextField.setEnabled(boolean) javax.swing.JCheckBox.setEnabled(boolean) javax.swing.JButton.setEnabled(boolean) javax.swing.JRadioButton.setEnabled(boolean) javax.swing.JFileChooser.setEnabled(boolean)",
+        "comment": "trust correct concise",
+        "time": 18.66175127029419
+    },
+    {
+        "query": "disconnect the tcp session connection and closes streams </s> java.io.InputStream java.io.OutputStream java.net.Socket",
+        "prediction": " java.io.InputStream.close() java.io.OutputStream.close() java.net.Socket.close()",
+        "comment": "trust correct concise",
+        "time": 5.530241966247559
+    },
+    {
+        "query": "get add and delete file history for all commits started from the newest commit to the oldest commit </s> java.sql.ResultSet java.awt.List",
+        "prediction": "java.sql.ResultSet.next() java.sql.ResultSet.getString(java.lang.String) java.awt.List.add(java.lang.String,int)",
+        "comment": "trust correct concise",
+        "time": 6.357779502868652
+    },
+    {
+        "query": "format the given list of products to a string </s> java.util.ArrayList",
+        "prediction": "java.lang.StringBuilder.StringBuilder(java.lang.String) java.util.ArrayList.get() java.lang.StringBuilder.append(java.lang.CharSequence,int,int) java.lang.StringBuilder.toString()",
+        "comment": "trust correct concise",
+        "time": 12.213354349136353
+    },
+    {
+        "query": "check to see if a path intersects the specified rectangle </s> java.awt.Stroke java.awt.Shape java.awt.Rectangle",
+        "prediction": "java.awt.Stroke.createStrokedShape(java.awt.Shape) java.awt.Rectangle.Rectangle(java.awt.Rectangle) java.awt.Shape.intersects(double,double,double,double)",
+        "comment": "trust correct",
+        "time": 5.859580755233765
+    },
+    {
+        "query": "draw an ellipse to represent an outlier </s> java.awt.geom.Point2D java.awt.Graphics2D java.awt.Shape",
+        "prediction": "java.lang.Double.Double(java.lang.String) java.awt.geom.Point2D.getX() java.awt.geom.Point2D.getY() java.awt.Graphics2D.draw(java.awt.Shape)",
+        "comment": "trust correct concise",
+        "time": 9.082262516021729
+    },
+    {
+        "query": "process mouse motion events occurring on this component by dispatching them to any registered mouse motion listener objects </s> java.awt.AWTEvent java.awt.event.MouseMotionListener java.awt.event.MouseEvent",
+        "prediction": "java.awt.AWTEvent.getID() java.awt.event.MouseMotionListener.mouseDragged(java.awt.event.MouseEvent) java.awt.event.MouseMotionListener.mouseMoved(java.awt.event.MouseEvent)",
+        "comment": "trust correct concise",
+        "time": 6.101952314376831
+    },
+    {
+        "query": "change the current image displayed by the button </s> java.awt.Image javax.swing.JButton",
+        "prediction": "java.awt.Image.getScaledInstance(int,int,int) javax.swing.ImageIcon.ImageIcon(java.awt.Image,java.lang.String) javax.swing.JButton.setIcon(javax.swing.Icon)",
+        "comment": "trust correct concise",
+        "time": 9.016746759414673
+    },
+    {
+        "query": "interactive with console </s> void",
+        "prediction": "java.lang.System.console() java.io.Console.readLine(java.lang.String)",
+        "comment": "trust correct concise",
+        "time": 7.073162078857422
+    },
+    {
+        "query": "save the state of the tree map instance to a stream </s> java.io.ObjectOutputStream",
+        "prediction": "java.io.ObjectOutputStream.defaultWriteObject() java.io.ObjectOutputStream.writeInt(int) java.io.ObjectOutputStream.writeObject(java.lang.Object)",
+        "comment": "trust correct",
+        "time": 6.0835161209106445
+    },
+    {
+        "query": "print debugging information about the environment </s> void",
+        "prediction": "java.lang.System.getProperty(java.lang.String,java.lang.String) java.lang.System.getenv(java.lang.String)",
+        "comment": "trust concise",
+        "time": 7.693502426147461
+    },
+    {
+        "query": "return the global locale </s> void",
+        "prediction": "java.util.Locale.Locale(java.lang.String,java.lang.String,java.lang.String) java.util.Locale.getDefault(java.util.Locale.Category) java.util.Locale.Locale(java.lang.String,java.lang.String,java.lang.String)",
+        "comment": "trust correct",
+        "time": 9.197739839553833
+    },
+    {
+        "query": "sleep the specified number of milliseconds </s> long",
+        "prediction": "java.lang.Thread.currentThread() java.lang.Thread.sleep(long,int)",
+        "comment": "trust correct concise",
+        "time": 5.689080238342285
+    },
+    {
+        "query": "parse system params </s> void",
+        "prediction": "java.lang.System.getProperty(java.lang.String) java.lang.Integer.parseInt(java.lang.String,int)",
+        "comment": "trust correct concise",
+        "time": 14.650378465652466
+    },
+    {
+        "query": "return version of java </s> void",
+        "prediction": "java.lang.System.getProperty(java.lang.String,java.lang.String) java.lang.System.getenv(java.lang.String)",
+        "comment": "trust correct",
+        "time": 7.131103038787842
+    },
+    {
+        "query": "parse the files </s> java.lang.String",
+        "prediction": "java.io.FileInputStream.FileInputStream(java.lang.String) java.io.InputStreamReader.InputStreamReader(java.io.InputStream,java.nio.charset.Charset) java.io.BufferedReader.BufferedReader(java.io.Reader,int)",
+        "comment": "trust correct concise",
+        "time": 14.319363832473755
+    },
+    {
+        "query": "check if the object is a nan or infinite number </s> void",
+        "prediction": "java.lang.Double.isNaN(double) java.lang.Double.isInfinite(double)",
+        "comment": "trust correct concise",
+        "time": 4.790900468826294
+    },
+    {
+        "query": "produce a string from a double </s> double",
+        "prediction": "java.lang.Double.isNaN(double) java.lang.Double.isInfinite(double) java.lang.Double.toString(double)",
+        "comment": "trust correct concise",
+        "time": 5.9850382804870605
+    },
+    {
+        "query": "return a new instance of algorithm parameter generator from the specified provider for the specified algorithm </s> java.lang.String",
+        "prediction": "java.lang.String.isEmpty() java.security.Security.getProvider(java.lang.String) java.security.AlgorithmParameterGenerator.getInstance(java.lang.String,java.security.Provider)",
+        "comment": "trust correct concise",
+        "time": 5.616122484207153
+    },
+    {
+        "query": "return the zip entry </s> java.lang.String",
+        "prediction": "java.util.zip.ZipFile.ZipFile(java.lang.String,java.nio.charset.Charset) java.util.zip.ZipFile.getEntry(java.lang.String) java.util.zip.ZipFile.close()",
+        "comment": "trust correct concise",
+        "time": 7.911079168319702
+    }
+]
