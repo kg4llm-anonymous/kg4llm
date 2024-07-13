@@ -8,7 +8,7 @@
 * model.py: This file defines the LLM structure and provides finetuning and generating interfaces.
 * run.py: The entry for training and testing.
 * syn_bleu: This file provides a package for calculating the TR and TBLEU metrics.
-* Cases.json: The total 60 real-world cases and their manually analyzed results.
+* KG4LLM/ChatGPT/DeepSeek.cases.json: The total 60 real-world cases and their manually analyzed results.
 
 ### Data and Environment Preparation
 
